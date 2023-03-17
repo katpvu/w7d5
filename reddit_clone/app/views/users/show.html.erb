@@ -3,3 +3,7 @@
 <h1>User's Show Page</h1>
 
 <p><%= @user.username %></p>
+
+<a href="<%=new_user_sub_url(@user)%>">Create New Sub</a>
+<br>
+<a href="<%=user_subs_url(@user)%>">All my Subs</a>

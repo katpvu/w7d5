@@ -1,0 +1,15 @@
+<h1>New Sub</h1>
+
+<form action="<%=user_subs_url%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="sub[title]">
+    <br>
+    <label for="description">Description</label>
+    <br>
+    <textarea name="sub[description]" id="description" cols="30" rows="10"></textarea>
+    <br>
+    
+    <input type="submit" value="Create Subreddit">
+
+</form>

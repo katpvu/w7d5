@@ -6,6 +6,11 @@ Rails.application.routes.draw do
 
   # actions are methods in the controller
   # index, show, new, create, edit, update, destroy
-  resources :users
+  resources :users do 
+    resources :subs, only: [:new, :create, :edit, :update, :index]
+  end
   resource :session, only: [:new, :create, :destroy]
+  resources :subs
+  resources :posts, except: [:index, :destroy]
+
 end
